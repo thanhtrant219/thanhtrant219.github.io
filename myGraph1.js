@@ -1,6 +1,6 @@
 var headerID = d3.select("#headerID");
 console.log(headerID.text());
-headerID.text("Java => understand D3");
+headerID.text("Java => understand D3 Graph1");
 // d3.select();
 // d3.selectAll();
 // d3.select('hi').style('color','red')
