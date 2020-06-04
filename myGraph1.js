@@ -160,7 +160,7 @@ links.forEach(function(link) {
 });
 
 var width = 960,
-    height = 1000;
+    height = 700;
 
 var force = d3.forceSimulation()
     .nodes(d3.values(nodes))
