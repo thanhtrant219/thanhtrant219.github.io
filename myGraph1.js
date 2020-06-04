@@ -1,27 +1,98 @@
-(function (d3, topojson) {
-  'use strict';
+chart = {
+  const root = pack(data);
+  let focus = root;
+  let view;
 
-  const svg = d3.select('svg');
+  const svg = d3.create("svg")
+      .attr("viewBox", `-${width / 2} -${height / 2} ${width} ${height}`)
+      .style("display", "block")
+      .style("margin", "0 -14px")
+      .style("background", color(0))
+      .style("cursor", "pointer")
+      .on("click", () => zoom(root));
 
-  const projection = d3.geoOrthographic();
-  const pathGenerator = d3.geoPath().projection(projection);
+  const node = svg.append("g")
+    .selectAll("circle")
+    .data(root.descendants().slice(1))
+    .join("circle")
+      .attr("fill", d => d.children ? color(d.depth) : "white")
+      .attr("pointer-events", d => !d.children ? "none" : null)
+      .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
+      .on("mouseout", function() { d3.select(this).attr("stroke", null); })
+      .on("click", d => focus !== d && (zoom(d), d3.event.stopPropagation()));
 
-  Promise.all([
-    d3.tsv('https://unpkg.com/world-atlas@1.1.4/world/110m.tsv'),
-    d3.json('https://unpkg.com/world-atlas@1.1.4/world/110m.json')
-  ]).then(([tsvData, topoJSONdata]) => {
-    const countryName = tsvData.reduce((accumulator,d) => {
-      accumulator[d.iso_n3] = d.name;
-      return accumulator;
-    },{});
-      
-      const countries = topojson.feature(topoJSONdata, topoJSONdata.objects.countries);
-      svg.selectAll('path').data(countries.features)
-        .enter().append('path')
-          .attr('class', 'country')
-          .attr('d', pathGenerator)
-    			.append('title')
-    					.text(d => countryName[d.id]);
-    });
+  const label = svg.append("g")
+      .style("font", "10px sans-serif")
+      .attr("pointer-events", "none")
+      .attr("text-anchor", "middle")
+    .selectAll("text")
+    .data(root.descendants())
+    .join("text")
+      .style("fill-opacity", d => d.parent === root ? 1 : 0)
+      .style("display", d => d.parent === root ? "inline" : "none")
+      .text(d => d.data.name);
 
-}(d3, topojson));
+  zoomTo([root.x, root.y, root.r * 2]);
+
+  function zoomTo(v) {
+    const k = width / v[2];
+
+    view = v;
+
+    label.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
+    node.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
+    node.attr("r", d => d.r * k);
+  }
+
+  function zoom(d) {
+    const focus0 = focus;
+
+    focus = d;
+
+    const transition = svg.transition()
+        .duration(d3.event.altKey ? 7500 : 750)
+        .tween("zoom", d => {
+          const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
+          return t => zoomTo(i(t));
+        });
+
+    label
+      .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+      .transition(transition)
+        .style("fill-opacity", d => d.parent === focus ? 1 : 0)
+        .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+        .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+  }
+
+  return svg.node();
+}
+
+data = Object {
+  name: "flare"
+  children: Array(10) [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object]
+}
+
+data = FileAttachment("flare-2.json").json()
+
+pack = ƒ(data)
+
+pack = data => d3.pack()
+    .size([width, height])
+    .padding(3)
+  (d3.hierarchy(data)
+    .sum(d => d.value)
+    .sort((a, b) => b.value - a.value))
+
+  width = 932
+  width = 932
+  height = 932
+  height = width
+  format = ƒ(t)
+  format = d3.format(",d")
+  color = ƒ(n)
+  color = d3.scaleLinear()
+    .domain([0, 5])
+    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+    .interpolate(d3.interpolateHcl)
+  d3 = Object {event: null, format: ƒ(t), formatPrefix: ƒ(t, n), timeFormat: ƒ(t), timeParse: ƒ(t), utcFormat: ƒ(t), utcParse: ƒ(t), FormatSpecifier: ƒ(t), active: ƒ(t, n), arc: ƒ(), area: ƒ(), areaRadial: ƒ(), ascending: ƒ(t, n), autoType: ƒ(t), axisBottom: ƒ(t), axisLeft: ƒ(t), axisRight: ƒ(t), axisTop: ƒ(t), bisect: ƒ(n, e, r, i), bisectLeft: ƒ(n, e, r, i), …}
+  d3 = require("d3@5")
