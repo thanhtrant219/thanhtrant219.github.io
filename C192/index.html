@@ -12,8 +12,24 @@
     />
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
+    <div class="navbar">
+  <a href="index.html">Home</a>
+  <!-- <a href="#news">News</a> -->
+  <div class="dropdown">
+    <button class="dropbtn">Graphs
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="graph1.html">Graph 1</a>
+      <a href="C19/index.html">Graph 2</a>
+      <a href="graph3.html">Graph 3</a>
+      <a href="C192/index.html">Graph 3</a>
+    </div>
+  </div> 
+</div>
     <div id="root"></div>
     <script src="bundle.js"></script>
   </body>
