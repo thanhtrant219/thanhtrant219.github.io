@@ -1,24 +1,24 @@
 import { useState, useEffect } from 'react';
 import { csv } from 'd3';
 
-const csvUrl = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/e1c41f13e907e3828fb40cb542148b6430426199/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv';
+const csvUrl = 'https://gist.githubusercontent.com/curran/a9656d711a8ad31d812b8f9963ac441c/raw/c22144062566de911ba32509613c84af2a99e8e2/MissingMigrants-Global-2019-10-08T09-47-14-subset.csv';
 
 const row = d => {
-  d.lat = +d.Lat;
-  d.lng = +d.Long;
+  d.coords = d['Location Coordinates'].split(',').map(d => +d).reverse();
+  d['Total Dead and Missing'] = + d['Total Dead and Missing'];
+  d['Reported Date'] = new Date(d['Reported Date']);
   return d;
 };
+
+const temp = csv(csvUrl, row);
+console.log(temp);
+
 
 export const useData = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    csv(csvUrl, row).then(rawData => {
-      const columns = rawData.columns
-      const mostRecentDate = columns[columns.length - 1];
-      console.log('Showing data for ' + mostRecentDate)
-      setData(rawData.filter(d => d[mostRecentDate] !== "0"))
-    });
+    csv(csvUrl, row).then(setData);
   }, []);
 
   return data;

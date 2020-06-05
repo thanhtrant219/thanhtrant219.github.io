@@ -1,5 +1,3 @@
-[Firefly Cartography](https://adventuresinmapping.com/2016/10/17/firefly-cartography/) with [OpenLayers](https://openlayers.org/) and [React](https://reactjs.org/).
+A world map showing cities with population greater than 50,000. City data from [Simplemaps: World Cities Database](https://gist.github.com/curran/13d30e855d48cdd6f22acdf0afe27286/).
 
-Each point on the map is a location for which there was at least one confirmed Coronavirus case as of 3/5/2020. Each location is shown as the same size and intensity, regardless of how many cases there were (this is a shortcoming of this visualization).
-
-Data from [Johns Hopkins: CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv);
+Country boundaries from [World Atlas TopoJSON](https://github.com/topojson/world-atlas), polished for visual style, including graticules.
