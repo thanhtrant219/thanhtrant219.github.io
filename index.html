@@ -89,34 +89,98 @@ $(document).ready(function() {
 	<h1 class="first">WRF-BPLUME</h1>
 	<div id="bodyContent" class="mw-body">
 	<div id="siteSub">WRF-BPLUME</div>
+	<!-- INTRO -->
+<p>This guide applies to WRF-bPlume, available at https://github.com/CFD-UTSA/bplume-WRF.
+
+ WRF-Fire from the WRF repository https://github.com/wrf-model/WRF is based on a limited version of this software from 2010, and it has evolved separately since then. This guide changes with the software and it complements the technical description in J. Mandel, J. D. Beezley, and A. K. Kochanski, Coupled atmosphere-wildland fire modeling with WRF 3.3 and SFIRE 2011, Geoscientific Model Development (GMD) 4, 591-610, 2011, doi:10.5194/gmd-4-591-2011 and J. Mandel, S. Amram, J. D. Beezley, G. Kelman, A. K. Kochanski, V. Y. Kondratenko, B. H. Lynn, B. Regev, M. Vejmelka, 2014, Recent advances and applications of WRF–SFIRE, Natural Hazards and Earth System Science, 14, 2829-2845, 2014, doi:10.5194/nhess-14-2829-2014.
+</p><p>The following text is an overview of the MediaWiki text formatting rules.  For examples without all the explanatory text, see the TextFormattingExamples.  To try these rules for yourself, please feel free to edit the <a href="/wiki/Sandbox" title="Sandbox">Sandbox</a> page. To see how any page is formatted, just follow the link "Edit" at the top of the page.
+</p>
+
 	<div id="contentsub"></div>
         <!-- start content -->
-        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="#" id="togglelink">hide</a>]&nbsp;</span></div>
+        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction to WRF-bPlume user guide</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#mailing_list"><span class="tocnumber">2</span> <span class="toctext">Mailing list</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Bold_and_Italics"><span class="tocnumber">3</span> <span class="toctext">Bold and Italics</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Headings"><span class="tocnumber">4</span> <span class="toctext">Headings</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Lists"><span class="tocnumber">5</span> <span class="toctext">Lists</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Indented_Text"><span class="tocnumber">6</span> <span class="toctext">Indented Text</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Preformatted_Text"><span class="tocnumber">7</span> <span class="toctext">Preformatted Text</span></a></li>
-<li class="toclevel-1 tocsection-8"><a href="#Embedding_Tables"><span class="tocnumber">8</span> <span class="toctext">Embedding Tables</span></a></li>
-<li class="toclevel-1 tocsection-9"><a href="#Miscellaneous_Rules"><span class="tocnumber">9</span> <span class="toctext">Miscellaneous Rules</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#mailing_list"><span class="tocnumber">1</span> <span class="toctext">Mailing List</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#overview"><span class="tocnumber">2</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#getting_started"><span class="tocnumber">3</span> <span class="toctext">Getting Started</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#configuration"><span class="tocnumber">4</span> <span class="toctext">Configuration</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#running_a_real_case"><span class="tocnumber">5</span> <span class="toctext">Running a Real Case</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#coupling_with_fuel_moisture_and_smoke"><span class="tocnumber">6</span> <span class="toctext">Coupling with Fuel Moisture and Smoke</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#data_assimilation_and_ignition_from_a_perimeter"><span class="tocnumber">7</span> <span class="toctext">Data assimilation and ignition from a perimeter</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#standalone_fire_model"><span class="tocnumber">8</span> <span class="toctext">Standalone Fire Model</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#visualisation"><span class="tocnumber">9</span> <span class="toctext">Visualisation</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#diagnostics"><span class="tocnumber">10</span> <span class="toctext">Diagnostics</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#publications"><span class="tocnumber">11</span> <span class="toctext">Publications</span></a></li>
 </ul>
 </div>
 
 <hr>
-<h3><span class="mw-headline" id="introduction">Introduction WRF-bPlume user guide</span></h3>
-<p>This guide applies to WRF-SFIRE, available at https://github.com/openwfm/WRF-SFIRE. WRF-Fire from the WRF repository https://github.com/wrf-model/WRF is based on a limited version of this software from 2010, and it has evolved separately since then. This guide changes with the software and it complements the technical description in J. Mandel, J. D. Beezley, and A. K. Kochanski, Coupled atmosphere-wildland fire modeling with WRF 3.3 and SFIRE 2011, Geoscientific Model Development (GMD) 4, 591-610, 2011, doi:10.5194/gmd-4-591-2011 and J. Mandel, S. Amram, J. D. Beezley, G. Kelman, A. K. Kochanski, V. Y. Kondratenko, B. H. Lynn, B. Regev, M. Vejmelka, 2014, Recent advances and applications of WRF–SFIRE, Natural Hazards and Earth System Science, 14, 2829-2845, 2014, doi:10.5194/nhess-14-2829-2014.
-</p><p>The following text is an overview of the MediaWiki text formatting rules.  For examples without all the explanatory text, see the TextFormattingExamples.  To try these rules for yourself, please feel free to edit the <a href="/wiki/Sandbox" title="Sandbox">Sandbox</a> page. To see how any page is formatted, just follow the link "Edit" at the top of the page.
-</p>
-
-<hr>
 <h3><span class="mw-headline" id="mailing_list">Mailing list</span></h3>
-<p>Please consider joining the mailing list wrf-sfire@googlegroups.com, which is monitored by the developers. Go to https://googlegroups.com/group/wrf-sfire and log into your google account, or, to join without a google account, send any email to wrf-sfire+subscribe@googlegroups.com.
+<p> ......Please consider joining the mailing list wrf-sfire@googlegroups.com, which is monitored by the developers. Go to https://googlegroups.com/group/wrf-sfire and log into your google account, or, to join without a google account, send any email to wrf-sfire+subscribe@googlegroups.com.
 </p>
 
 <hr>
+<h3><span class="mw-headline" id="overview">Overview</span></h3>
+<p>A new formulation—bPlume-WRF-LES model—was implemented within the Weather Research and
+Forecasting (WRF) Model to simulate the two-way coupling between the atmospheric boundary layer (ABL) and gas plume
+released into the atmosphere. The existing WRF large-eddy simulation (WRF-LES) modeling system
+was modified by coupling an additional transport equation for the plume gas mixture and by accounting for the buoyant
+production term in the turbulence kinetic energy equation. The focus of the work was to understand the effect of atmospheric forcings on plume rise, plume mixing, and plume dynamics during the early stages of plume development. For this purpose, the bPlume-WRF-LES model was used to simulate the release of buoyant plumes from a large area source into
+different atmospheric conditions with varying stratification and mean wind forcing values
+</p>
+
+<hr>
+<h3><span class="mw-headline" id="configuration">Configuration</span></h3>
+<p>namelist.input</p>
+<p>namelist.fire</p>
+<p>Vertical win interpolation</p>
+<p>Ignition</p>
+
+<hr>
+<h3><span class="mw-headline" id="getting_started">Getting Started</span></h3>
+<p>The WRF-Fire code in WRF release has an old version of the code here, from 2010, with further modifications at NCAR and developments since WRF 4.0. We cannot support that version and it is not under our control. Many different features were added since then. Please get the current version from http://github.com/openwfm/WRF-SFIRE as described here, which includes current SFIRE and WRF. This is the only version we can support. We can even consider adding features on request.</p>
+
+<p>SFIRE is maintained in a git repository. A git repository is a software version control system similar to CVS or SVN. There is a repository containing WRF-SFIRE and another repository containing WPS, and it is regularly synchronized with major WRF releases. They both need to be compiled with the same compiler and be present at the same directory level. In order to obtain the software from our repositories, you must first download and install the git software. The default view of the repository is the head of the master branch, which should contain a current stable and working code at any time.</p>
+
+<p>The best view of current activity is available at http://repo.or.cz/git-browser/by-commit.html?r=WRF-SFIRE.git</p>
+
+<p>Developers can get write access to the git repository on request, and must push changes to it.</p>
+
+<hr>
+<h3><span class="mw-headline" id="running_a_real_case">Running a Real Case</span></h3>
+<p>Instructions to set up the whole WRFx system right now using the last version of all the components with a couple of working examples. WRFx consists of a Fortran coupled atmosphere-fire model WRF-SFIRE, a python automatic HPC system wrfxpy, a visualization web interface wrfxweb, and a simulation web interface wrfxctrl.
+</p>
+
+<hr>
+<h3><span class="mw-headline" id="coupling_with_fuel_moisture_and_smoke">Coupling with Fuel Moisture and Smoke</span></h3>
+<p>Fire spread rate depends strongly on the moisture contents of the fuel. In fact, the spread rate drops to zero when the moisture reaches the so-called extinction value</p><p>
+Dependence of fire spread rate (with zero wind and slope) on fuel moisture. The spread rate becomes zero when the fuel moisture equals the extinction moisture, here 0.25.</p><p>
+For this reason, we have coupled the ﬁre spread model with a simple fuel moisture model integrated with WRF and SFIRE. The model takes atmospheric state from WRF and provides fuel moisture to SFIRE.
+</p>
+
+<hr>
+<h3><span class="mw-headline" id="data_assimilation_and_ignition_from_a_perimeter">Data Assimilation and Ignition from a Perimeter</span></h3>
+<p>This feature allows a gradual spin up of the atmosphere over the period from the restart to fire_perimerer_time, to develop circulation from the fire forcing. It can be used for an ignition from a given fire perimeter (by creating an artificial fire arrival time from the perimeter), and for data assimilation (by modifying the fire arrival time array in response to data).
+</p>
+
+<hr>
+<h3><span class="mw-headline" id="standalone_fire_model">Standalone Fire Model</span></h3>
+<p>...</p>
+
+<hr>
+<h3><span class="mw-headline" id="visualisation">Visualisation</span></h3>
+<p>...</p>
+
+<hr>
+<h3><span class="mw-headline" id="diagnostics">Diagnostics</span></h3>
+<p>...</p>
+
+<hr>
+<h3><span class="mw-headline" id="publications">Publications</span></h3>
+<p>...</p>
+
+
+<!-- <hr>
 <h3><span class="mw-headline" id="Bold_and_Italics">Bold and Italics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit&amp;section=3" title="Edit section: Bold and Italics">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <p>To mark text as <b>bold</b>, <i>italic</i> or <code>fixed-width</code>, you can use single quotation-mark formatting (the MediaWiki standard). Examples:
 </p>
@@ -243,9 +307,9 @@ preformatted text. Note that links like
 <h3><span class="mw-headline" id="Miscellaneous_Rules">Miscellaneous Rules</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit&amp;section=9" title="Edit section: Miscellaneous Rules">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
 <ul><li> To quote text without applying the wiki formatting rules, enclose it within a &lt;nowiki&gt; ... &lt;/nowiki&gt; section.  Within a nowiki section, only HTML-quoting of special characters (&lt;&gt;&amp;) will occur--no other formatting rules will be applied.</li>
 <li> A line which ends in a backslash character (\) will be joined with the next line before most formatting rules are applied.  This can be useful for breaking up long sections of text in line-sensitive sections (like lists or indented text).</li>
-<li> Most of the formatting rules are order-independent.  On rare occasions the order of processing may be important.  The rules are processed in the following order: HTML quoting, nowiki tags, backslash line joining, preformatted sections, paragraphs, lists and indented text, horizontal lines, italic/bold text, URLs, and finally ordinary WikiName links.  </li></ul>
-<table cellspacing="3" align="center">
+<li> Most of the formatting rules are order-independent.  On rare occasions the order of processing may be important.  The rules are processed in the following order: HTML quoting, nowiki tags, backslash line joining, preformatted sections, paragraphs, lists and indented text, horizontal lines, italic/bold text, URLs, and finally ordinary WikiName links.  </li></ul> -->
 
+<table cellspacing="3" align="center">
 <tbody><tr valign="top">
 <td width="80%" class="centerblock">
 <center><b><a href="/wiki/What_Is_A_Wiki" title="What Is A Wiki">What Is A Wiki?</a></b> | <b><a href="/wiki/How_To_Edit" title="How To Edit">How To Edit</a></b> | <b><strong class="selflink">Basic Wiki Formatting</strong></b> | <b><a href="/wiki/Templates" title="Templates">Templates</a></b> | <b><a href="/wiki/Style_Guide" title="Style Guide">Style Guide</a></b> | <b><a href="/wiki/This_Might_Be_A_Wiki:Searching" title="This Might Be A Wiki:Searching">Help With Searching</a></b></center>
@@ -271,7 +335,9 @@ Transclusion expansion time report (%,ms,calls,template)
 
 <!-- Saved in parser cache with key tmbw_wikidb:pcache:idhash:908-0!*!0!!en!*!* and timestamp 20220217051755 and revision id 317714
  -->
-</div><div class="printfooter">
+</div>
+
+<div class="printfooter">
 Retrieved from "<a dir="ltr" href="https://tmbw.net/wiki/index.php?title=Basic_Wiki_Formatting&amp;oldid=317714">https://tmbw.net/wiki/index.php?title=Basic_Wiki_Formatting&amp;oldid=317714</a>"</div>
         <div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Wiki_Info" title="Category:Wiki Info">Wiki Info</a></li></ul></div></div>        <!-- end wiki content -->
         	<div class="visualClear"></div>
@@ -288,15 +354,17 @@ Retrieved from "<a dir="ltr" href="https://tmbw.net/wiki/index.php?title=Basic_W
       </div><!-- /footer -->
     </div><!-- /container -->
     </div><!-- /supershadow -->
-    <div id="p-cactions" class="portlet"><span id="pagetools-title"></span>
+
+    <!-- <div id="p-cactions" class="portlet"><span id="pagetools-title"></span>
 	<ul>
         <li id="ca-nstab-main" class="selected"><a href="/wiki/Basic_Wiki_Formatting"><span></span>Article</a></li>
         <li id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:Basic_Wiki_Formatting&amp;action=edit&amp;redlink=1"><span></span>Discussion</a></li>
         <li id="ca-edit"><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit"><span></span>Edit</a></li>
         <li id="ca-history"><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=history"><span></span>History</a></li>
       </ul>
-    </div>
-    <div id="lefttabs"><span id="sitenav-title"></span>
+    </div> -->
+
+    <!-- <div id="lefttabs"><span id="sitenav-title"></span>
 	<div class="portlet" id="p-navigation">
 		<h5>Navigation</h5>
 		<div class="pBody">
@@ -356,7 +424,7 @@ Retrieved from "<a dir="ltr" href="https://tmbw.net/wiki/index.php?title=Basic_W
 			<div class="ulfooter">&nbsp;</div>
 		</div>
 	</div>
-    </div><!-- /lefttabs -->
+    </div><!-- /lefttabs --> -->
     </div><!-- /globalWrapper -->
 <!-- here -->
 <script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
@@ -382,4 +450,5 @@ document.write("\u003Cscript src=\"https://tmbw.net/wiki/load.php?debug=false\u0
   <script>if(window.mw){
 mw.config.set({"wgBackendResponseTime":272});
 }</script>  
+
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
