@@ -1,31 +1,376 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles.css">
+<html lang="en" dir="ltr" class="client-js"><head><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+<meta charset="UTF-8">
+<title>Basic Wiki Formatting - TMBW: The They Might Be Giants Knowledge Base</title>
+<meta name="generator" content="MediaWiki 1.25.0">
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit">
+<link rel="edit" title="Edit" href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="This Might Be A Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://tmbw.net/wiki/api.php?action=rsd">
+<link rel="alternate" hreflang="x-default" href="/wiki/Basic_Wiki_Formatting">
+<link rel="alternate" type="application/atom+xml" title="This Might Be A Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="stylesheet" href="https://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=azureSkinCSS%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.ui.button&amp;only=styles&amp;skin=azure&amp;*">
+<style>
+.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}  .mw-content-ltr .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr .mw-collapsible-toggle{float:right} .mw-content-rtl .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl .mw-collapsible-toggle{float:left}.mw-customtoggle,.mw-collapsible-toggle{cursor:pointer} caption .mw-collapsible-toggle,.mw-content-ltr caption .mw-collapsible-toggle,.mw-content-rtl caption .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr caption .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle,.mw-content-ltr li .mw-collapsible-toggle,.mw-content-rtl li .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr li .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:e1ffd603cbaaa5f1a36e0d13fe843535 */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.highlight{font-weight:bold}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:f8d0c6895ce3ae14434c16b8fca59432 */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(https://tmbw.net/wiki/resources/src/mediawiki.action/images/green-checkmark.png?2015-05-25T13:01:40Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:21684e97d25aa6615f6f2015c95ae19c */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:black;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:ae3fa4570b5ac0c6cf7b3776c8ae4d6f */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=azure&amp;*">
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:a2f1a9e3354033da4df1a393c1f9ca92 */</style>
+<script>if(window.mw){
+mw.loader.state({"azureSkinJS":"loading"});
+}</script>
+<script src="https://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=azure&amp;*"></script><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=jquery%2Cmediawiki&amp;only=scripts&amp;skin=azure&amp;version=20220123T173659Z"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Basic_Wiki_Formatting","wgTitle":"Basic Wiki Formatting","wgCurRevisionId":317714,"wgRevisionId":317714,"wgArticleId":908,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wiki Info"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Basic_Wiki_Formatting","wgRelevantArticleId":908,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":false,"hidesig":true,"preview":true,"publish":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-js:7:a5c52c063dc436c1ca7c9f456936a5e9 */
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"https://tmbw.net/wiki/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=azureSkinJS\u0026amp;only=scripts\u0026amp;skin=azure\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script><script src="https://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=azureSkinJS&amp;only=scripts&amp;skin=azure&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=jquery.accessKeyLabel%2Cclient%2CmwExtension%7Cmediawiki.legacy.ajax%2Cwikibits%7Cmediawiki.notify%2Cutil%7Cmediawiki.page.startup&amp;skin=azure&amp;version=20220211T053641Z&amp;*"></script>
+<script language="javascript" type="text/javascript">getcss();</script><style type="text/css">body{background:#002635 url('/wiki/skins/azure/_img/bg/bg4o.svg') no-repeat center 40% fixed;}</style>
+		<script language="javascript" type="text/javascript">theyDayBanner();</script>
+	<!-- Logic for making the site mobile responsive --><script language="javascript" type="text/javascript">
+$(document).ready(function() {
+  $('#pagetools-title').on('click',function() {
+    $('body').toggleClass('pagetools-open');
+  });
+  $('#sitenav-title').on('click',function() {
+    $('body').toggleClass('sitenav-open');
+  });
+  $('#personaltoolstitle').on('click',function() {
+    $('body').toggleClass('personaltools-open');
+  });
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script language="javascript" type="text/javascript">jQuery('#ul-personaltools').ready(function(){ jQuery('#ul-personaltools').slideUp(1000); }); jQuery('#ul-toolbox').ready(function(){ jQuery('#ul-toolbox').slideUp(0); });</script>
 </head>
-<body>
-
-  <div class="navbar">
-  <a href="index.html">Home</a>
-  <!-- <a href="#news">News</a> -->
-  <div class="dropdown">
-    <button class="dropbtn">Graphs
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="Heated_Ammonia.html">Heated Buoyant Ammonia</a>
-      <a href="Helium_Flux_1.html">Helium 1 with Flux</a>
-      <a href="Helium_NonFlux_1.html">Helium 1 NonFlux</a>
-      <a href="Helium_2.html">Helium 2</a>
-    </div>
-  </div> 
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Basic_Wiki_Formatting skin-azure action-view vector-animateLayout" data-new-gr-c-s-check-loaded="14.1050.0" data-gr-ext-installed="">
+	  	<div id="personaltools">
+  	  <span id="personaltoolstitle" onclick="jQuery('#ul-personaltools').slideToggle();">Personal tools</span>
+      <ul id="ul-personaltools" style="display: none;">
+        <li id="pt-createaccount"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Basic+Wiki+Formatting&amp;type=signup">Create account</a></li>
+        <li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Basic+Wiki+Formatting">Log in</a></li>
+	</ul>
+	</div><!-- /personaltools -->
+	<div id="globalWrapper">
+	<div id="supershadow">
+	<div id="container">
+		
+	<a href="/wiki/Main_Page" title="Main Page" id="headerwrapper">
+        <div id="header">This Might Be A Wiki</div>
+        <div id="subtitle">The TMBG Knowledge Base</div>
+      </a>
+      <div id="content" class="mw-body-primary" role="main"> <!-- bw, this was previously called innercontainer -->
+	<a name="top" id="top"></a>
+	<h1 class="first">Basic Wiki Formatting</h1>
+	<div id="bodyContent" class="mw-body">
+	<div id="siteSub">From This Might Be A Wiki</div>
+	<div id="contentsub"></div>
+        <!-- start content -->
+        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="#" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction_to_Wiki_Formatting"><span class="tocnumber">1</span> <span class="toctext">Introduction to Wiki Formatting</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Basic_Text_Formatting"><span class="tocnumber">2</span> <span class="toctext">Basic Text Formatting</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Bold_and_Italics"><span class="tocnumber">3</span> <span class="toctext">Bold and Italics</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Headings"><span class="tocnumber">4</span> <span class="toctext">Headings</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Lists"><span class="tocnumber">5</span> <span class="toctext">Lists</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Indented_Text"><span class="tocnumber">6</span> <span class="toctext">Indented Text</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Preformatted_Text"><span class="tocnumber">7</span> <span class="toctext">Preformatted Text</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Embedding_Tables"><span class="tocnumber">8</span> <span class="toctext">Embedding Tables</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Miscellaneous_Rules"><span class="tocnumber">9</span> <span class="toctext">Miscellaneous Rules</span></a></li>
+</ul>
 </div>
 
-<h1 id="headerID">      </h1>
-<h1 id="headerID">Click on Graphs to choose Visualizasions</h1>
-<h1 id="headerID">      </h1>
-</body>
-</html>
+<h3><span class="mw-headline" id="Introduction_to_Wiki_Formatting">Introduction to Wiki Formatting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit&amp;section=1" title="Edit section: Introduction to Wiki Formatting">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Simple editing is one of the major benefits of using a wiki.  Users can edit pages without knowing HTML, and still use many formatting features of HTML.  Most wikis define a set of formatting rules to convert plain text into HTML.  Some wikis (like this one) also allow some HTML "tags", like &lt;b&gt;, &lt;i&gt;, and &lt;pre&gt; within a page.  (Some wikis use raw HTML instead of special formatting rules.)
+</p><p>The following text is an overview of the MediaWiki text formatting rules.  For examples without all the explanatory text, see the TextFormattingExamples.  To try these rules for yourself, please feel free to edit the <a href="/wiki/Sandbox" title="Sandbox">Sandbox</a> page. To see how any page is formatted, just follow the link "Edit" at the top of the page.
+</p>
+<hr>
+<h3><span class="mw-headline" id="Basic_Text_Formatting">Basic Text Formatting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit&amp;section=2" title="Edit section: Basic Text Formatting">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Most text does not require any special changes for wiki form.  A few basic rules are:
+</p>
+<ul><li> Do not indent paragraphs.  (Indenting may cause your text to appear in a monospaced font.)</li>
+<li> Leave a single blank line between paragraphs.</li>
+<li> To create a horizontal line, type four dashes (----).</li>
+<li> There is no need to encode HTML characters like &lt;, &gt;, or &amp;.</li>
+<li> HTML characters like © and ∞ can be used on pages: do "&amp;copy;" and "&amp;infin;" (version 0.91 and later). See <a rel="nofollow" class="external free" href="http://www.w3.org/TR/html4/sgml/entities.html">http://www.w3.org/TR/html4/sgml/entities.html</a>.</li></ul>
+<hr>
+<h3><span class="mw-headline" id="Bold_and_Italics">Bold and Italics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit&amp;section=3" title="Edit section: Bold and Italics">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>To mark text as <b>bold</b>, <i>italic</i> or <code>fixed-width</code>, you can use single quotation-mark formatting (the MediaWiki standard). Examples:
+</p>
+<pre>''Two single quotes are italics'',
+'''three single quotes are bold''',
+'''''five single quotes are bold and italic.'''''
+</pre>
+<p>looks like:
+</p><p><i>Two single quotes are italics</i>,
+<b>three single quotes are bold</b>,
+<i><b>five single quotes are bold and italic.</b></i>
+</p><p>HTML &lt;b&gt; and &lt;i&gt; tags can also be used. For example:
+</p>
+<pre>&lt;b&gt; bold &lt;/b&gt;, 
+&lt;i&gt; italic &lt;/i&gt;,
+&lt;b&gt; &lt;i&gt; bold+italic &lt;/i&gt; &lt;/b&gt;.
+</pre>
+<p>Note that MediaWiki (like most Wikis) processes pages line-by-line, so if you want three bold lines of text, you will need to use three separate &lt;b&gt;...&lt;/b&gt; tags.  Also note that unclosed or unmatched tags are not removed from the page.
+</p>
+<hr>
+<h3><span class="mw-headline" id="Headings">Headings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit&amp;section=4" title="Edit section: Headings">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Headings are delimited by 1-6 equal signs (=). They basically correspond to HTML's &lt;h1&gt; through &lt;h6&gt; tags. Size 1 headings are reserved for page titles, and should not be used on any article or talk page.
+</p>
+<pre>= Headline size 1 =
+== Headline size 2 ==
+=== Headline size 3 ===
+==== Headline size 4 ====
+===== Headline size 5 =====
+====== Headline size 6 ======</pre>
+<hr>
+<h3><span class="mw-headline" id="Lists">Lists</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit&amp;section=5" title="Edit section: Lists">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Simple lists:
+</p>
+<pre>* Text for a bulleted list item.
+** Text for second-level list.
+*** Text for third level, etc.
+</pre>
+<p>...which looks like:
+</p>
+<ul><li> Text for a bulleted list item.
+<ul><li> Text for second-level list.
+<ul><li> Text for third level, etc.</li></ul></li></ul></li></ul>
+<p>Numbered lists:
+</p>
+<pre># Text for a numbered list item.
+## Text for second-level list.
+### Text for third level, etc.
+## Another Text for the second level.
+</pre>
+<p>...which looks like:
+</p>
+<ol><li> Text for a numbered list item.
+<ol><li> Text for second-level list.
+<ol><li> Text for third level, etc.</li></ol></li>
+<li> Another Text for the second level.</li></ol></li></ol>
+<hr>
+<h3><span class="mw-headline" id="Indented_Text">Indented Text</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit&amp;section=6" title="Edit section: Indented Text">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Simple indented text:
+</p>
+<pre>: Text to be indented (quote-block)
+:: Text indented more
+::: Text indented to third level
+</pre>
+<p>...which looks like:
+</p>
+<dl><dd> Text to be indented (quote-block)
+<dl><dd> Text indented more
+<dl><dd> Text indented to third level</dd></dl></dd></dl></dd></dl>
+<p>Term with indented definition: [without a blank line between term and definition]
+</p>
+<pre>;Term:Definition (indented)
+:;Term (indented):Definition (indented two levels)
+::;Term (indented twice):Definition (indented to third level)
+</pre>
+<p>...which looks like:
+</p>
+<dl><dt>Term</dt>
+<dd>Definition (indented)
+<dl><dt>Term (indented)</dt>
+<dd>Definition (indented two levels)
+<dl><dt>Term (indented twice)</dt>
+<dd>Definition (indented to third level)</dd></dl></dd></dl></dd></dl>
+<hr>
+<h3><span class="mw-headline" id="Preformatted_Text">Preformatted Text</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit&amp;section=7" title="Edit section: Preformatted Text">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Individual lines can be displayed as preformatted (fixed-width or "typewriter"-font) text by placing one or more spaces at the start of the line.  Other wiki formatting (like links) will be applied to this kind of preformatted text.
+</p><p>Additionally, multi-line sections can be marked as pre-formatted text using lines starting with &lt;pre&gt; (to start pre-formatted text), and &lt;/pre&gt; (to end preformatted text).  The &lt;pre&gt; and &lt;/pre&gt; tags are not displayed.  Wiki links and other formatting is not done within a preformatted section.  (If you want wiki formatting, use spaces at the start of the line instead of the &lt;pre&gt; and &lt;/pre&gt; tags.)
+</p><p>For instance:
+</p>
+<pre>Pre-formatted section here. No other
+link or format processing
+is done on pre-formatted sections.
+For instance, [[UseModWiki]] is not a link here.
+</pre>
+<p>and:
+</p>
+<pre>This is the starting-spaces version of
+preformatted text. Note that links like
+<a href="/wiki/UseModWiki" title="UseModWiki" class="mw-redirect">UseModWiki</a> still work.
+</pre>
+<hr>
+<h3><span class="mw-headline" id="Embedding_Tables">Embedding Tables</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit&amp;section=8" title="Edit section: Embedding Tables">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Rather than going through the lengthy and complicated way to add a table, you can easily do it using wiki code.  To start a table, add this text:
+</p>
+<pre>{|</pre>
+<p>Next, to start a row, use a pipe and a dash, such as this:
+</p>
+<pre>|-</pre>
+<p>For each cell, add a pipe.  (Note, start a new line for each cell):
+</p>
+<pre>|Cell1
+|Cell2
+|Cell3
+</pre>
+<p>Then, just make sure to close your table with the pipe and squiggly line:
+</p>
+<pre>|}</pre> 
+<p>On TMBW's Azure skin, the "ebena" class can be applied to tables for a stylish and clean look as seen on <a href="/wiki/Shows" title="Shows">Shows</a>. Just add <code>class="ebena"</code> to the top of a table, like this:
+</p>
+<pre>{|class="ebena"</pre>
+<p>And there you have it!
+</p><p>For more detailed tables, please visit <a rel="nofollow" class="external text" href="http://meta.wikimedia.org/wiki/Table">wikimedia.org</a>, or use this <a rel="nofollow" class="external text" href="http://bmanolov.free.fr/html2wiki-tables.php">HTML to Wiki table converter</a>.
+</p>
+<hr>
+<h3><span class="mw-headline" id="Miscellaneous_Rules">Miscellaneous Rules</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit&amp;section=9" title="Edit section: Miscellaneous Rules">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li> To quote text without applying the wiki formatting rules, enclose it within a &lt;nowiki&gt; ... &lt;/nowiki&gt; section.  Within a nowiki section, only HTML-quoting of special characters (&lt;&gt;&amp;) will occur--no other formatting rules will be applied.</li>
+<li> A line which ends in a backslash character (\) will be joined with the next line before most formatting rules are applied.  This can be useful for breaking up long sections of text in line-sensitive sections (like lists or indented text).</li>
+<li> Most of the formatting rules are order-independent.  On rare occasions the order of processing may be important.  The rules are processed in the following order: HTML quoting, nowiki tags, backslash line joining, preformatted sections, paragraphs, lists and indented text, horizontal lines, italic/bold text, URLs, and finally ordinary WikiName links.  </li></ul>
+<table cellspacing="3" align="center">
+
+<tbody><tr valign="top">
+<td width="80%" class="centerblock">
+<center><b><a href="/wiki/What_Is_A_Wiki" title="What Is A Wiki">What Is A Wiki?</a></b> | <b><a href="/wiki/How_To_Edit" title="How To Edit">How To Edit</a></b> | <b><strong class="selflink">Basic Wiki Formatting</strong></b> | <b><a href="/wiki/Templates" title="Templates">Templates</a></b> | <b><a href="/wiki/Style_Guide" title="Style Guide">Style Guide</a></b> | <b><a href="/wiki/This_Might_Be_A_Wiki:Searching" title="This Might Be A Wiki:Searching">Help With Searching</a></b></center>
+</td></tr></tbody></table>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.049 seconds
+Real time usage: 0.054 seconds
+Preprocessor visited node count: 225/1000000
+Preprocessor generated node count: 476/1000000
+Post‐expand include size: 312/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/500
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.225      1 - -total
+100.00%    3.225      1 - Template:Help_Nav
+-->
+
+<!-- Saved in parser cache with key tmbw_wikidb:pcache:idhash:908-0!*!0!!en!*!* and timestamp 20220217051755 and revision id 317714
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://tmbw.net/wiki/index.php?title=Basic_Wiki_Formatting&amp;oldid=317714">https://tmbw.net/wiki/index.php?title=Basic_Wiki_Formatting&amp;oldid=317714</a>"</div>
+        <div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Wiki_Info" title="Category:Wiki Info">Wiki Info</a></li></ul></div></div>        <!-- end wiki content -->
+        	<div class="visualClear"></div>
+</div><!-- /bodycontent -->
+      </div><!-- /content--> 
+      <div id="footer">
+      			  <script type="text/javascript">getwaw();</script><div id="williamallenwhite" class=""></div>
+               <ul id="f-list">
+          <li id="privacy"><a href="/wiki/This_Might_Be_A_Wiki:Privacy_policy" title="This Might Be A Wiki:Privacy policy">Privacy policy</a></li>
+          <li id="about"><a href="/wiki/This_Might_Be_A_Wiki:About" title="This Might Be A Wiki:About">About This Might Be A Wiki</a></li>
+          <li id="disclaimer"><a href="/wiki/This_Might_Be_A_Wiki:General_disclaimer" title="This Might Be A Wiki:General disclaimer">Disclaimers</a></li>
+	<li id="follow" style="display:inline;"><br>Follow TMBW.Net on: </li><li id="twitter"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAApVBMVEX////u9/qOx91+v9iez+FPqcwvmsNAoMUfkr6e0OM/tuNgsM/O5/APrOjP6vSe2/MQi7pvvNmv5Pj///9ArNb////P7fgPsO4wvPF+0/Se3PS+5PMvuO3////////O7flQxfPv+f0QiLZfy/T////////P7/t+1fae3/je9Pz///////8AlMwAltAAkckApOMArO4Aod8AnNgAqeoAmdQAib0An9vBJTQnAAAALHRSTlMAD3CBYLHQv+Biyp8w80J+7pR4DMUUVvPbn4FX2xgPWsI/7rYDKGChiVcfB+Kv0VUAAAABYktHRACIBR1IAAAACXBIWXMAAABIAAAASABGyWs+AAAAhklEQVQY02NgIAIwQkgmZhYGRjCblQVEsuno6rFzcIKYXHrcjAw8+gYGBoa8fCABfgMjAW5BAxAQEgYJiBgYGBuZgAVEwcaJiRtAgQTEFmFJmIgU1F5pGagCWaiAnLwCmK8IdRe3kqkZkK+sqAIRUFFVU1dX19BUVYG7XVhLS0tWmxhfggEAF7UQF19tYhIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTMtMDItMjhUMTM6NDE6NDErMDg6MDAIzUNTAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEzLTAyLTI4VDEzOjQxOjQxKzA4OjAweZD77wAAAABJRU5ErkJggg==" alt="Twitter" style="vertical-align:text-top;"> <a href="http://twitter.com/tmbw">Twitter</a></li><li id="facebook"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAe1BMVEVVbKpUa6k5T5JVbKo7UZM5T5L///9cfLNGaKRYeLFKbKhPZqVNZKNRZ6Y8U5VJX599lcNHXZ1SaahEW5xLYaFAVpg+VJZnhrlPZ55CWZpCY59ggLU5T5KhudlVbKpheqc/X5xjg7f19/pkfqpOcKtTda4tS4qZrdBzj70LAH3eAAAABnRSTlPv7x8f7+/VY02GAAAAeklEQVR4XlXHRRLDMBQE0bFjj8DIEGS4/wkjyX/hvEVXNXY4b7iN6tNGHaGdbhtTi+Lwp0CmxOdOKpUhN8I9jcnRvwT5de1RPQXpW6GxAQNrG3Q6YKB1h2UvSN8Fw1WQvgPGtyB9R5QPQfqWSObLinSZE8TpcUW6pPEPr3wWR0m1z0gAAAAASUVORK5CYII=" alt="Facebook" style="vertical-align:text-bottom;"> <a href="https://www.facebook.com/tmbw.net">Facebook</a></li>
+        </ul><!-- /f-list -->
+      </div><!-- /footer -->
+    </div><!-- /container -->
+    </div><!-- /supershadow -->
+    <div id="p-cactions" class="portlet"><span id="pagetools-title"></span>
+	<ul>
+        <li id="ca-nstab-main" class="selected"><a href="/wiki/Basic_Wiki_Formatting"><span></span>Article</a></li>
+        <li id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:Basic_Wiki_Formatting&amp;action=edit&amp;redlink=1"><span></span>Discussion</a></li>
+        <li id="ca-edit"><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit"><span></span>Edit</a></li>
+        <li id="ca-history"><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=history"><span></span>History</a></li>
+      </ul>
+    </div>
+    <div id="lefttabs"><span id="sitenav-title"></span>
+	<div class="portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page">Main Page</a></li>
+				<li id="n-Site-Map"><a href="/wiki/Site_Map">Site Map</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges">Recent changes</a></li>
+				<li id="n-randompage"><a href="/wiki/Special:Random">Random page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents">Help</a></li>
+				<li id="n-TMBW.Net-Chat"><a href="/wiki/TMBW.Net_Chat">TMBW.Net Chat</a></li>
+				<li id="n-Contact-us"><a href="/wiki/Contact_Us">Contact us</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div class="portlet" id="p-other">
+		<h5>other</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-Albums"><a href="/wiki/Discography/Studio_Albums">Albums</a></li>
+				<li id="n-Discography"><a href="/wiki/Discography">Discography</a></li>
+				<li id="n-Shows"><a href="/wiki/Shows">Shows</a></li>
+				<li id="n-Videos"><a href="/wiki/Videos">Videos</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div class="portlet" id="p-songs">
+		<h5>songs</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-Songs"><a href="/wiki/Category:Songs">Songs</a></li>
+				<li id="n-Lyrics"><a href="/wiki/Category:Lyrics">Lyrics</a></li>
+				<li id="n-Guitar-tabs"><a href="/wiki/Category:Guitar_Tabs">Guitar tabs</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="Search" onfocus="if(this.value == 'Search') { this.value = ''; }" autocomplete="off" control-id="ControlID-1">
+						<input type="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJGSURBVDjLjdJLSNRBHMDx78yqLZaKS75DPdgDDaFDbdJmde5QlhCJGxgpRJfqEEKnIsJLB7skQYQKZaSmdLaopPCgEvSCShCMzR5a7oq7/3l12RVtjfzBMA/4fWZ+MyOccwBM3g8HEbIdfCEhfAFnLVapOa28Uevpjrqz/WOsERJgsu9Uq5CZQzgqrJfo9BajNd5irEYn4p3OUiFExtCLmw2tawFi4l5zUMjMIau9u7K+qxeoAcoAA0wDb2OPwmfA16LiiaOHLj1edRLpkO3WmIis7+oBDgJbgQ2AH6gC6jY19N62RkcctKeVIJAhp9QgUA3kJXdONZVcq9JxPSgQoXRAyIDRth8oAXQyKdWnoCKrTD9CBv4GMqx1WGNZkeRWJKbG2hiD1Cb9FbTnzWFdY/LCdLKlgNQ84gyNKqHm0gDjqVHnxDHgA/B9RQkpaB6YklkZl62np9KBhOqwjpKFgeY2YAz4BESBWHI8Hhs6PVVSvc3v98ye4fP7T676B845nt040ip98qpWJmI9PWiU6bfWgXGN2YHcKwU7tsuc4kpUPMbU0+f8+vKt+Pitl7PLAMDI9cNBoB0hQwICzjqUp6MZvsy8yvp95BRuQUjJ75mPvH4wYo1NlJ64Mza7DPwrhi8cCOeXl/aUB4P4c/NJxKLMvpngycCrzxVFG2v/CwAMnguF80oLe8p27cQh+fnpPV/fTc95S6piXQDAw7a9YbWkezZXFbAwMx/xPFXb1D3+Y90AQF/L7kAsri9mZ4lrTd0TcYA/Kakr+x2JSPUAAAAASUVORK5CYII=" alt="Search" style="vertical-align:-20%;">
+			</div></form>
+		</div>
+		<div class="ulfooter">&nbsp;</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Tools</h5>
+		<div class="pBody">
+			<ul><li><a onclick="jQuery('#ul-toolbox').slideToggle();" style="cursor:pointer;">Toolbox</a></li><span id="ul-toolbox" class="collapsed" style="display: none;">
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Basic_Wiki_Formatting">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Basic_Wiki_Formatting">Related changes</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages">Special pages</a></li>
+				<li id="t-print"><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;oldid=317714">Permanent link</a></li>			</span></ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+    </div><!-- /lefttabs -->
+    </div><!-- /globalWrapper -->
+<!-- here -->
+<script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-948553-1']);
+		_gaq.push(['_trackPageview']);
+		_gaq.push(['_trackPageLoadTime']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"https://tmbw.net/wiki/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=azure\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script><script src="https://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=azure&amp;*"></script><div class="suggestions" style="display: none; font-size: 16px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div>
+  <script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":272});
+}</script>  
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
