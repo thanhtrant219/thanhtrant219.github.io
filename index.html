@@ -96,17 +96,17 @@ $(document).ready(function() {
         <!-- start content -->
         <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#mailing_list"><span class="tocnumber">1</span> <span class="toctext">Mailing List</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#overview"><span class="tocnumber">2</span> <span class="toctext">Overview</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#getting_started"><span class="tocnumber">3</span> <span class="toctext">Getting Started</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#configuration"><span class="tocnumber">4</span> <span class="toctext">Configuration</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#running_a_real_case"><span class="tocnumber">5</span> <span class="toctext">Running a Real Case</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#coupling_with_fuel_moisture_and_smoke"><span class="tocnumber">6</span> <span class="toctext">Coupling with Fuel Moisture and Smoke</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#data_assimilation_and_ignition_from_a_perimeter"><span class="tocnumber">7</span> <span class="toctext">Data assimilation and ignition from a perimeter</span></a></li>
-<li class="toclevel-1 tocsection-8"><a href="#standalone_fire_model"><span class="tocnumber">8</span> <span class="toctext">Standalone Fire Model</span></a></li>
-<li class="toclevel-1 tocsection-9"><a href="#visualisation"><span class="tocnumber">9</span> <span class="toctext">Visualisation</span></a></li>
-<li class="toclevel-1 tocsection-10"><a href="#diagnostics"><span class="tocnumber">10</span> <span class="toctext">Diagnostics</span></a></li>
-<li class="toclevel-1 tocsection-11"><a href="#publications"><span class="tocnumber">11</span> <span class="toctext">Publications</span></a></li>
+<!-- <li class="toclevel-1 tocsection-1"><a href="#mailing_list"><span class="tocnumber">1</span> <span class="toctext">Mailing List</span></a></li> -->
+<li class="toclevel-1 tocsection-1"><a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#getting_started"><span class="tocnumber">2</span> <span class="toctext">Getting Started</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#configuration"><span class="tocnumber">3</span> <span class="toctext">Configuration</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#running_a_real_case"><span class="tocnumber">4</span> <span class="toctext">Running a Real Case</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#coupling_with_fuel_moisture_and_smoke"><span class="tocnumber">5</span> <span class="toctext">Coupling with Fuel Moisture and Smoke</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#data_assimilation_and_ignition_from_a_perimeter"><span class="tocnumber">6</span> <span class="toctext">Data assimilation and ignition from a perimeter</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#standalone_fire_model"><span class="tocnumber">7</span> <span class="toctext">Standalone Fire Model</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#visualisation"><span class="tocnumber">8</span> <span class="toctext">Visualisation</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#diagnostics"><span class="tocnumber">9</span> <span class="toctext">Diagnostics</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#publications"><span class="tocnumber">10</span> <span class="toctext">Publications</span></a></li>
 </ul>
 </div>
 
@@ -160,8 +160,21 @@ different atmospheric conditions with varying stratification and mean wind forci
 <ul><li>plume_surface_flux 		– Surface flux of plume mixing ratio</li></ul>
 <ul><li>source_dia 			– Plume source diameter</li></ul>
 
+<h4> <span class="mw-headline" id="files_modified">For WRF-bPlume following files are modified based on the default WRF-ARW framework (v 4.0.3):</span></h4>
+<ul><li>/Registry/Registry.EM_COMMON</li></ul> 
+<ul><li>/dyn_em/module_big_step_utilities.F</li></ul>
+<ul><li>/dyn_em/module_diffusion_em.F</li></ul>
+<ul><li>/dyn_em/module_em.F</li></ul>
+<ul><li>/dyn_em/module_initialize_ideal.F</li></ul>
+<ul><li>/dyn_em/solve_em.F</li></ul>
+<ul><li>/share/wrf_timeseries.F</li></ul>
+<!-- <ul><li>axisymmetric_plume    – flag to simulate axisymmetric plume at the center of the bottom boundary</li></ul>
+<ul><li>plume_gas_constant    – Gas constant of plume material</li></ul>
+<ul><li>plume_surface_flux    – Surface flux of plume mixing ratio</li></ul>
+<ul><li>source_dia      – Plume source diameter</li></ul> -->
 
-<<!-- p>namelist.input</p>
+
+<!-- <p>namelist.input</p>
 <p>namelist.fire</p>
 <p>Vertical win interpolation</p>
 <p>Ignition</p> -->
@@ -364,7 +377,7 @@ Retrieved from "<a dir="ltr" href="https://tmbw.net/wiki/index.php?title=Basic_W
         	<div class="visualClear"></div>
 </div><!-- /bodycontent -->
       </div><!-- /content--> 
-      <div id="footer">
+      <!-- <div id="footer">
       			  <script type="text/javascript">getwaw();</script><div id="williamallenwhite" class=""></div>
                <ul id="f-list">
           <li id="privacy"><a href="/wiki/This_Might_Be_A_Wiki:Privacy_policy" title="This Might Be A Wiki:Privacy policy">Privacy policy</a></li>
@@ -372,7 +385,7 @@ Retrieved from "<a dir="ltr" href="https://tmbw.net/wiki/index.php?title=Basic_W
           <li id="disclaimer"><a href="/wiki/This_Might_Be_A_Wiki:General_disclaimer" title="This Might Be A Wiki:General disclaimer">Disclaimers</a></li>
 	<li id="follow" style="display:inline;"><br>Follow TMBW.Net on: </li><li id="twitter"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAApVBMVEX////u9/qOx91+v9iez+FPqcwvmsNAoMUfkr6e0OM/tuNgsM/O5/APrOjP6vSe2/MQi7pvvNmv5Pj///9ArNb////P7fgPsO4wvPF+0/Se3PS+5PMvuO3////////O7flQxfPv+f0QiLZfy/T////////P7/t+1fae3/je9Pz///////8AlMwAltAAkckApOMArO4Aod8AnNgAqeoAmdQAib0An9vBJTQnAAAALHRSTlMAD3CBYLHQv+Biyp8w80J+7pR4DMUUVvPbn4FX2xgPWsI/7rYDKGChiVcfB+Kv0VUAAAABYktHRACIBR1IAAAACXBIWXMAAABIAAAASABGyWs+AAAAhklEQVQY02NgIAIwQkgmZhYGRjCblQVEsuno6rFzcIKYXHrcjAw8+gYGBoa8fCABfgMjAW5BAxAQEgYJiBgYGBuZgAVEwcaJiRtAgQTEFmFJmIgU1F5pGagCWaiAnLwCmK8IdRe3kqkZkK+sqAIRUFFVU1dX19BUVYG7XVhLS0tWmxhfggEAF7UQF19tYhIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTMtMDItMjhUMTM6NDE6NDErMDg6MDAIzUNTAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEzLTAyLTI4VDEzOjQxOjQxKzA4OjAweZD77wAAAABJRU5ErkJggg==" alt="Twitter" style="vertical-align:text-top;"> <a href="http://twitter.com/tmbw">Twitter</a></li><li id="facebook"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAe1BMVEVVbKpUa6k5T5JVbKo7UZM5T5L///9cfLNGaKRYeLFKbKhPZqVNZKNRZ6Y8U5VJX599lcNHXZ1SaahEW5xLYaFAVpg+VJZnhrlPZ55CWZpCY59ggLU5T5KhudlVbKpheqc/X5xjg7f19/pkfqpOcKtTda4tS4qZrdBzj70LAH3eAAAABnRSTlPv7x8f7+/VY02GAAAAeklEQVR4XlXHRRLDMBQE0bFjj8DIEGS4/wkjyX/hvEVXNXY4b7iN6tNGHaGdbhtTi+Lwp0CmxOdOKpUhN8I9jcnRvwT5de1RPQXpW6GxAQNrG3Q6YKB1h2UvSN8Fw1WQvgPGtyB9R5QPQfqWSObLinSZE8TpcUW6pPEPr3wWR0m1z0gAAAAASUVORK5CYII=" alt="Facebook" style="vertical-align:text-bottom;"> <a href="https://www.facebook.com/tmbw.net">Facebook</a></li>
         </ul><!-- /f-list -->
-      </div><!-- /footer -->
+      </div><!-- /footer --> -->
     </div><!-- /container -->
     </div><!-- /supershadow -->
 
