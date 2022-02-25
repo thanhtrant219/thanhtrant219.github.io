@@ -17,6 +17,10 @@
 .suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.highlight{font-weight:bold}
 /* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:f8d0c6895ce3ae14434c16b8fca59432 */
 .postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(https://tmbw.net/wiki/resources/src/mediawiki.action/images/green-checkmark.png?2015-05-25T13:01:40Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+mark { 
+  background-color: yellow;
+  color: black;
+}
 /* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:21684e97d25aa6615f6f2015c95ae19c */</style><style>
 .suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:black;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}
 /* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:ae3fa4570b5ac0c6cf7b3776c8ae4d6f */</style><meta name="ResourceLoaderDynamicStyles" content="">
@@ -69,34 +73,26 @@ $(document).ready(function() {
 	<script language="javascript" type="text/javascript">jQuery('#ul-personaltools').ready(function(){ jQuery('#ul-personaltools').slideUp(1000); }); jQuery('#ul-toolbox').ready(function(){ jQuery('#ul-toolbox').slideUp(0); });</script>
 </head>
 <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Basic_Wiki_Formatting skin-azure action-view vector-animateLayout" data-new-gr-c-s-check-loaded="14.1050.0" data-gr-ext-installed="">
-	  	<!-- <div id="personaltools">
-  	  <span id="personaltoolstitle" onclick="jQuery('#ul-personaltools').slideToggle();">Personal tools</span>
-      <ul id="ul-personaltools" style="display: none;">
-        <li id="pt-createaccount"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Basic+Wiki+Formatting&amp;type=signup">Create account</a></li>
-        <li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Basic+Wiki+Formatting">Log in</a></li>
-	</ul>
-	</div> --> <!-- /personaltools -->
 	<div id="globalWrapper">
 	<div id="supershadow">
 	<div id="container">
 		
-	<!-- <a href="/wiki/Main_Page" title="Main Page" id="headerwrapper">
-        <div id="header">WRF-BPLUME</div>
-        <div id="subtitle">The Underline Title Base</div>
-      </a> -->
       <div id="content" class="mw-body-primary" role="main"> <!-- bw, this was previously called innercontainer -->
 	<a name="top" id="top"></a>
 	<h1 class="first">WRF-BPLUME</h1>
 	<div id="bodyContent" class="mw-body">
 	<div id="siteSub">WRF-BPLUME</div>
-	<!-- INTRO -->
+
+
+	<!-- INTRODUCTION -->
 <p>This guide applies to WRF-bPlume, available at <a href="https://github.com/CFD-UTSA/bplume-WRF">https://github.com/CFD-UTSA/bplume-WRF</a>. WRF-bPlume formulation is developed within the WRF framework (<a href="https://github.com/wrf-model/WRF">https://github.com/wrf-model/WRF</a>) that accounts for the two-way coupling between the ABL and the buoyant plume by accounting for the buoyancy forcings and the buoyant TKE production generated by the plume.
 
+
+<!-- MENU -->
 	<div id="contentsub"></div>
         <!-- start content -->
         <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
 <ul>
-<!-- <li class="toclevel-1 tocsection-1"><a href="#mailing_list"><span class="tocnumber">1</span> <span class="toctext">Mailing List</span></a></li> -->
 <li class="toclevel-1 tocsection-1"><a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#getting_started"><span class="tocnumber">2</span> <span class="toctext">Getting Started</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#configuration"><span class="tocnumber">3</span> <span class="toctext">Configuration</span></a></li>
@@ -110,11 +106,8 @@ $(document).ready(function() {
 </ul>
 </div>
 
-<!-- <hr>
-<h3><span class="mw-headline" id="mailing_list">Mailing list</span></h3>
-<p> .....
-</p> -->
-
+<!-- OVERVIEW -->
+<!-- --------------------------- -->
 <hr>
 <h3><span class="mw-headline" id="overview">Overview</span></h3>
 <p>WRF-bPlume model was implemented within the Weather Research and
@@ -125,10 +118,15 @@ production term in the turbulence kinetic energy equation. The focus of the work
 different atmospheric conditions with varying stratification and mean wind forcing values.
 </p>
 
+
+<!-- GETTING STARTED -->
+<!-- --------------------------- -->
 <hr>
 <h3><span class="mw-headline" id="getting_started">Getting Started</span></h3>
 
-<h4> <span class="mw-headline" id="installation">Installation:</span></h4>
+<!-- Installation -->
+<h4 onclick="myFunction('installation_toggle')"><li> <span class="mw-headline" id="installation"> <a>Installation</a></span></li></h4>
+<div id="installation_toggle" hidden>
 <ul><li>Step1: The latest version of WRF-bPlume is avaliable at <a href="https://github.com/CFD-UTSA/bplume-WRF">https://github.com/CFD-UTSA/bplume-WRF</a>.</li></ul>
 <ul><li>Step2: Follow usual WRF-ARW compiling steps (<a href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php">WRF-ARW</a>).</li></ul>
 <ul><li>Step3: **Compile WRF in Large-eddy simulation mode.</li></ul>
@@ -136,18 +134,26 @@ different atmospheric conditions with varying stratification and mean wind forci
 <ul><li>Step5: Start building cases using the test case available within WRF build.</li></ul>
 <ul><li>Step6: **For a quick CBL case, use /test/em_les/ present in the main WRF directory.</li></ul>
 <ul><li>Step7: Key files modified for WRF-bPlume are present in Registry/ and dyn_em/ directories.</li></ul>
+</div>
 
-<h4> <span class="mw-headline" id="useful_WRF-ARW_links">Useful WRF-ARW links:</span></h4>
+<!-- WRF_ARW links -->
+<h4 onclick="myFunction('useful_WRF_ARW_links_toggle')"><li> <span class="mw-headline" id="useful_WRF_ARW_links"><a>Useful WRF-ARW links</a></span></li></h4>
+<div id="useful_WRF_ARW_links_toggle" hidden>
 <ul><li> <a href="https://opensky.ucar.edu/islandora/object/opensky:2898">Technical guide</a></li></ul>
 <ul><li> <a href="https://www2.mmm.ucar.edu/wrf/users/docs/wrf-dyn.html">WRF Dynamics guide</a></li></ul>
 <ul><li> <a href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.0/contents.html">User guide</a></li></ul>
 <ul><li> <a href="https://www2.mmm.ucar.edu/wrf/users/supports/tutorial.html">Tutorials page</a></li></ul>
 <ul><li> <a href="https://www2.mmm.ucar.edu/wrf/users/namelist_best_prac_wrf.html">Best Practices</a></li></ul>
+</div>
 
+<!-- --------------------------- -->
+<!-- CONFIGURATION -->
 <hr>
 <h3><span class="mw-headline" id="configuration">Configuration</span></h3>
 
-<h4> <span class="mw-headline" id="new_in_WRF-bPlume">New variables added in WRF-bPlume are:</span></h4>
+<!-- new_in_WRF_bPlume -->
+<h4 onclick="myFunction('new_in_WRF_bPlume_toggle')"> <li><span class="mw-headline" id="new_in_WRF_bPlume"> <a> New variables added in WRF-bPlume </a> </span> </li></h4> 
+<div id="new_in_WRF_bPlume_toggle" hidden>
 <ul><li>tke_heat_flux_hot 					– Additional heat flux at the source location</li></ul>
 <ul><li>heat_flux_wait_mins 				– Minutes from simulation start to release the plume</li></ul>
 <ul><li>heat_flux_run_mins 		– Minutes from plume start to turn off the plume source</li></ul>
@@ -159,8 +165,11 @@ different atmospheric conditions with varying stratification and mean wind forci
 <ul><li>plume_gas_constant 		– Gas constant of plume material</li></ul>
 <ul><li>plume_surface_flux 		– Surface flux of plume mixing ratio</li></ul>
 <ul><li>source_dia 			– Plume source diameter</li></ul>
+</div>
 
-<h4> <span class="mw-headline" id="files_modified">For WRF-bPlume following files are modified based on the default WRF-ARW framework (v 4.0.3):</span></h4>
+<!-- files_modified -->
+<h4 onclick="myFunction('files_modified_toggle')"><li> <span class="mw-headline" id="files_modified"><a>WRF-bPlume following files are modified based on the default WRF-ARW framework (v 4.0.3)</a></span></li></h4>
+<div id="files_modified_toggle" hidden>
 <ul><li>/Registry/Registry.EM_COMMON</li></ul> 
 <ul><li>/dyn_em/module_big_step_utilities.F</li></ul>
 <ul><li>/dyn_em/module_diffusion_em.F</li></ul>
@@ -168,6 +177,66 @@ different atmospheric conditions with varying stratification and mean wind forci
 <ul><li>/dyn_em/module_initialize_ideal.F</li></ul>
 <ul><li>/dyn_em/solve_em.F</li></ul>
 <ul><li>/share/wrf_timeseries.F</li></ul>
+</div>
+
+<!-- Simulation Time -->
+<h4 onclick="myFunction('simulation_time_toggle')"><li> <span class="mw-headline" id="simulation_time"><a>Simulation Time</a></span></li></h4>
+<div id="simulation_time_toggle" hidden>
+<ul>&time_control</ul> 
+<ul><ul>run_days &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul><mark>run_hours &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 2,</mark> <ul># WRF stops running when condition is fulfilled.</ul></ul></ul>
+<ul><ul>run_minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul>start_year &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  = 0001,</ul></ul>
+<ul><ul>start_month &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 01,</ul></ul>
+<ul><ul>start_day &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  = 01,</ul></ul>
+<ul><ul>start_hour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul>start_minute &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul>start_second &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0,</ul></ul>
+<ul><ul>end_year &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 0001,</ul></ul>
+<ul><ul>end_month &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 01,</ul></ul>
+<ul><ul>end_day &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 01,</ul></ul>
+<ul><ul><mark>end_hour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 04,</mark><ul># WRF stops running when condition is fulfilled.</ul></ul></ul>
+<ul><ul>end_minute &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 00,</ul></ul>
+<ul><ul>end_second &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 00,</ul></ul>
+<ul><ul>history_interval_m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 00,</ul></ul>
+<ul><ul><mark>history_interval_s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 10,</mark><ul># WRF writes the output for each domain.
+Minimum time step to write is 1s.</ul></ul></ul>
+<ul><ul>frames_per_outfile &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 90,</ul></ul>
+<ul><ul><mark>restart &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = .false.,</mark><ul># Restart runs are half-completed runs.
+The start time must match the time information in restart file (wrfrst_d01_*.nc).</ul></ul></ul>
+<ul><ul>restart_interval_m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 15,</ul></ul>
+<ul><ul>io_form_history &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 2,</ul></ul>
+<ul><ul>io_form_restart &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 2,</ul></ul>
+<ul><ul>io_form_input &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 2,</ul></ul>
+<ul><ul>io_form_boundary &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 2,</ul></ul>
+<ul><ul>iofields_filename &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = "myourfields.txt",</ul></ul>
+</div>
+
+<!-- Contents of myoutfields.txt-->
+<h4 onclick="myFunction('myoutfields_toggle')"><li> <span class="mw-headline" id="myoutfields.txt"><a>Contents of myoutfields.txt</a></span></li></h4>
+<div id="myoutfields_toggle" hidden>
+<ul><li>Useful in reducing the WRFOUT file size</li></ul> 
+<ul><li>Many of the default variables written by WRF are unimportant for ideal cases</li></ul>
+<ul><p style="font-size: xx-small;">-:h:0:LU_INDEX,DZS,VAR_SSO,NEST_POS,FNM,FNP,RDNW,RDN,DNW,DN,CFN,CFN1,RDX,RDY,RESM<br>-:h:0:ZETATOP,CF1,CF2,CF3,ITIMESTEP,XTIME,SHDMAX,SHDMIN,SNOALB,TSLB<br>
+-:h:0:SMOIS,SH2O,SEAICE,XICEM,SFROFF<br>
+-:h:0:UDROFF,IVGTYP,ISLTYP,VEGFRA,ACSNOM,SNOW,SNOWH,CANWAT,COSZEN,LAI,VAR<br>
+-:h:0:MAPFAC_M,MAPFAC_U,MAPFAC_V,MAPFAC_MX,MAPFAC_MY,MAPFAC_UX,MAPFAC_UY<br>
+-:h:0:MAPFAC_VX,MF_VX_INV,MAPFAC_VY<br>
+-:h:0:F,E,SINALPHA,COSALPHA,TISO,MAX_MSTFX,MAX_MSTFY,RAINC,RAINSH,RAINNC<br>
+-:h:0:SNOWNC,GRAUPELNC,HAILNC,SWDOWN<br>
+-:h:0:OLR,CLAT,ALBBCK,EMISS,NOAHRES,TMN,SNOWC,SR,C1H,C2H,C1F,C2F,C3H,C4H,C3F,C4F,PCB,PC<br>
+-:h:0:LANDMASK,LAKEMASK<br>
+-:h:0:HFX_FORCE_TEND,LH_FORCE_TEND,TSK_FORCE_TEND,HFX_FORCE,LH_FORCE,TSK_FORCE<br>
+-:h:0:ZS,SSTSK,GLW,SWNORM<br>
+-:h:0:ISEEDARR_SPPT,ISEEDARR_SKEBS,ISEEDARR_RAND_PERTURB,ISEEDARRAY_SPP_CONV<br>
+-:h:0:ISEEDARRAY_SPP_PBL,ISEEDARRAY_SPP_LSM,THIS_IS_AN_IDEAL_RUN<br>
+-:h:0:SAVE_TOPO_FROM_REAL,TLP,SST_INPUT<br>
+-:h:0:CLDFRA,ALBEDO,ZNU,ZNW<br>
+-:h:0:Q2,T2,TH2,U10,V10,GRDFLX,ACGRDFLX,HGT,P_STRAT,XLAT_U,XLONG_U,XLAT_V,XLONG_V<br>
++:h:0:PBLH,ACHFX,ACLHF,SST<br>
+</p></ul>
+</div>
+
 <!-- <ul><li>axisymmetric_plume    – flag to simulate axisymmetric plume at the center of the bottom boundary</li></ul>
 <ul><li>plume_gas_constant    – Gas constant of plume material</li></ul>
 <ul><li>plume_surface_flux    – Surface flux of plume mixing ratio</li></ul>
@@ -180,11 +249,15 @@ different atmospheric conditions with varying stratification and mean wind forci
 <p>Ignition</p> -->
 
 
+<!-- GETTING STARTED -->
+<!-- --------------------------- -->
 <hr>
 <h3><span class="mw-headline" id="running_a_real_case">Running a Real Case</span></h3>
 <p>Instructions to set up the whole WRFx system right now using the last version of all the components with a couple of working examples. WRFx consists of a Fortran coupled atmosphere-fire model WRF-SFIRE, a python automatic HPC system wrfxpy, a visualization web interface wrfxweb, and a simulation web interface wrfxctrl.
 </p>
 
+<!-- GETTING STARTED -->
+<!-- --------------------------- -->
 <hr>
 <h3><span class="mw-headline" id="coupling_with_fuel_moisture_and_smoke">Coupling with Fuel Moisture and Smoke</span></h3>
 <p>Fire spread rate depends strongly on the moisture contents of the fuel. In fact, the spread rate drops to zero when the moisture reaches the so-called extinction value</p><p>
@@ -192,6 +265,8 @@ Dependence of fire spread rate (with zero wind and slope) on fuel moisture. The 
 For this reason, we have coupled the ﬁre spread model with a simple fuel moisture model integrated with WRF and SFIRE. The model takes atmospheric state from WRF and provides fuel moisture to SFIRE.
 </p>
 
+<!-- GETTING STARTED -->
+<!-- --------------------------- -->
 <hr>
 <h3><span class="mw-headline" id="data_assimilation_and_ignition_from_a_perimeter">Data Assimilation and Ignition from a Perimeter</span></h3>
 <p>This feature allows a gradual spin up of the atmosphere over the period from the restart to fire_perimerer_time, to develop circulation from the fire forcing. It can be used for an ignition from a given fire perimeter (by creating an artificial fire arrival time from the perimeter), and for data assimilation (by modifying the fire arrival time array in response to data).
@@ -483,6 +558,17 @@ document.write("\u003Cscript src=\"https://tmbw.net/wiki/load.php?debug=false\u0
 }</script><script src="https://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=azure&amp;*"></script><div class="suggestions" style="display: none; font-size: 16px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div>
   <script>if(window.mw){
 mw.config.set({"wgBackendResponseTime":272});
-}</script>  
+}</script>
+
+<script>
+function myFunction(myid) {
+  var x = document.getElementById(myid);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>  
 
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
