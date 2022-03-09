@@ -335,70 +335,77 @@ Buoyant gas in bPlume model is part of such schemes.
 <h4 onclick="myFunction('boundary_conditions_toggle')"><li> <span class="mw-headline" id="boundary_conditions"><a>Simulation Boundary Conditions</a></span></li></h4>
 <div id="boundary_conditions_toggle" hidden>
 <ul><li>For LES runs, periodic in horizontal boundary condition is used</li></ul> 
+<ul><li>These are given through input_sounding file in the same directory</li></ul> 
 
-<ul>&bdy_control</ul> 
-<!-- <ul><ul>hybrid_opt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0,</ul></ul>
-<ul><ul>rk_ord &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 3,</ul></ul>
-<ul><ul><mark>diff_opt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 2,</mark></ul></ul>
-<ul><ul><mark>km_opt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 2,</mark></ul></ul>
-<ul><ul>damp_opt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;= 0,</ul></ul>
-<ul><ul>zdamp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 200.,</ul></ul>
-<ul><ul>dampcoef &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0.2,</ul></ul>
-<ul><ul>khdif &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 1.,</ul></ul>
-<ul><ul>kvdif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 1.,</ul></ul>
-<ul><ul>c_s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 0.18,</ul></ul>
-<ul><ul>c_k &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.10,</ul></ul>
-<ul><ul>mix_isotropic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 1,</ul></ul>
-<ul><ul>smdiv &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.1,</ul></ul>
-<ul><ul>emdiv &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.01,</ul></ul>
-<ul><ul>epssm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.1,</ul></ul> -->
+<ul><li>First line gives the temperature and moisture mixing ratio at the surface level (1000 corresponds to pressure)</li></ul> 
+<ul><li>Required inputs are temperature, moisture, U and V wind components
+This example has no mean wind </li></ul> 
+
+<ul>1000.00   305.00      14.00</ul>
+<ul>25.00     300.00      10.00       10.00       0.00</ul>
+<ul>75.00     300.00      10.00       10.00       0.00</ul>
+<ul> 125.00     300.00      10.00       10.00       0.00</ul>
+<ul> 175.00     300.00      10.00       10.00       0.00</ul>
+<ul> 225.00     300.00      10.00       10.00       0.00</ul>
+<ul> 275.00     300.00      10.00       10.00       0.00</ul>
+<ul> 325.00     300.00      10.00       10.00       0.00</ul>
+<ul> 375.00     300.00      10.00       10.00       0.00</ul> 
+<ul> 1725.00     300.00      10.00       10.00       0.00</ul>
+<ul> 1975.00     302.43      10.00       10.00       0.00</ul>
+<ul> 2025.00     305.63       4.00       10.00       0.00</ul>
+<ul> 2075.00     308.05       4.00       10.00       0.00</ul>
+<ul> 2125.00     308.20       4.00       10.00       0.00</ul>
+<ul> 2175.00     308.35       4.00       10.00       0.00</ul>
+<ul> 2225.00     308.50       4.00       10.00       0.00</ul>
+</div>
+
+<!-- Simulation Time CBL -->
+<h4 onclick="myFunction('simulation_times_cbl_toggle')"><li> <span class="mw-headline" id="Setting_SimulationTimes"><a>Setting Simulation Times – Plume + CBL</a></span></li></h4>
+<div id="simulation_times_cbl_toggle" hidden>
+	<ul>&time_control
+<ul>run_days                          = 0,</ul>
+<ul>run_hours                           = 2,</ul>
+<ul>run_minutes                         = 0,</ul>
+<ul>run_seconds                         = 0,</ul>
+<ul>start_year                          = 0001,</ul>
+<ul>start_month                         = 01,</ul>
+<ul>start_day                           = 01,</ul>
+<ul>start_hour                          = 02,</ul>
+<ul>start_minute                        = 00,</ul>
+<ul>start_second                        = 00,</ul>
+<ul>end_year                            = 0001,</ul>
+<ul>end_month                           = 01,</ul>
+<ul>end_day                             = 01,</ul>
+<ul>end_hour                            = 04,</ul>
+<ul>end_minute                          = 00,</ul>
+<ul>end_second                          = 00,</ul>
+<ul>history_interval_m                  = 00,</ul>
+<ul>history_interval_s                  = 10,</ul>
+<ul>frames_per_outfile                  = 90,</ul>
+<ul>restart                             = .true.,</ul>
+<ul>restart_interval_m                  = 15,</ul>
+<ul>io_form_history                     = 2</ul>
+<ul>io_form_restart                     = 2</ul>
+<ul>io_form_input                       = 2</ul>
+<ul>io_form_boundary                    = 2</ul>
+<ul>iofields_filename                   = "myoutfields.txt"</ul>
+</div>
 </div>
 
 
-
+<!-- --------------------------- -->
+<!-- OUTPUT DATA -->
 <hr>
 <h3><span class="mw-headline" id="WRF-output">WRF Output Data</span></h3>
 
-
-<!-- hr>
-<h3><span class="mw-headline" id="running_a_real_case">Running a Real Case</span></h3>
-<p>Instructions to set up the whole WRFx system right now using the last version of all the components with a couple of working examples. WRFx consists of a Fortran coupled atmosphere-fire model WRF-SFIRE, a python automatic HPC system wrfxpy, a visualization web interface wrfxweb, and a simulation web interface wrfxctrl.
-</p>
-<p>...</p> -->
-
-<!-- <hr>
-<h3><span class="mw-headline" id="coupling_with_fuel_moisture_and_smoke">Coupling with Fuel Moisture and Smoke</span></h3>
-<p>Fire spread rate depends strongly on the moisture contents of the fuel. In fact, the spread rate drops to zero when the moisture reaches the so-called extinction value</p><p>
-Dependence of fire spread rate (with zero wind and slope) on fuel moisture. The spread rate becomes zero when the fuel moisture equals the extinction moisture, here 0.25.</p><p>
-For this reason, we have coupled the ﬁre spread model with a simple fuel moisture model integrated with WRF and SFIRE. The model takes atmospheric state from WRF and provides fuel moisture to SFIRE.
-</p>
-<p>...</p> -->
-
-
-<!-- <hr>
-<h3><span class="mw-headline" id="data_assimilation_and_ignition_from_a_perimeter">Data Assimilation and Ignition from a Perimeter</span></h3>
-<p>This feature allows a gradual spin up of the atmosphere over the period from the restart to fire_perimerer_time, to develop circulation from the fire forcing. It can be used for an ignition from a given fire perimeter (by creating an artificial fire arrival time from the perimeter), and for data assimilation (by modifying the fire arrival time array in response to data).
-</p>
-<p>...</p> -->
-<!-- 
+<!-- NetCDF -->
+<h4 onclick="myFunction('netcdf_toggle')"><li> <span class="mw-headline" id="NetCDF"><a>NetCDF Data</a></span></li></h4>
+<div id="netcdf_toggle" hidden>
+	<ul>Output for WRF-bPlume is in NetCDF format. NetCDF (network Common Data Form) is a file format for storing multidimensional scientific data (variables) such as temperature, humidity, pressure, wind speed, and direction. Each of these variables can be displayed through a dimension (such as time) in ArcGIS by making a layer or table view from the netCDF file.</ul>
+</div>
 <hr>
-<h3><span class="mw-headline" id="standalone_fire_model">Standalone Fire Model</span></h3>
-<p>...</p>
-
-<hr>
-<h3><span class="mw-headline" id="visualisation">Visualisation</span></h3>
-<p>... PyPlume mean visualiztion...detail about pyplume and how to use it..</p>
-
-<hr>
-<h3><span class="mw-headline" id="diagnostics">Diagnostics</span></h3>
-<p>...</p>
-
-<hr>
-<h3><span class="mw-headline" id="publications">Publications</span></h3>
-<p>...</p> -->
 
 
-<hr>
 
 <table cellspacing="3" align="center">
 <tbody><tr valign="top">
