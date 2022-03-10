@@ -12,6 +12,9 @@
 <link rel="alternate" type="application/atom+xml" title="This Might Be A Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom">
 <link rel="stylesheet" href="https://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=azureSkinCSS%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.ui.button&amp;only=styles&amp;skin=azure&amp;*">
 <style>
+.imgContainer{
+    float:left;
+}
 .mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}  .mw-content-ltr .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr .mw-collapsible-toggle{float:right} .mw-content-rtl .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl .mw-collapsible-toggle{float:left}.mw-customtoggle,.mw-collapsible-toggle{cursor:pointer} caption .mw-collapsible-toggle,.mw-content-ltr caption .mw-collapsible-toggle,.mw-content-rtl caption .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr caption .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle,.mw-content-ltr li .mw-collapsible-toggle,.mw-content-rtl li .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr li .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
 /* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:e1ffd603cbaaa5f1a36e0d13fe843535 */
 .suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.highlight{font-weight:bold}
@@ -95,14 +98,15 @@ $(document).ready(function() {
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#getting_started"><span class="tocnumber">2</span> <span class="toctext">Getting Started</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#configuration"><span class="tocnumber">3</span> <span class="toctext">Configuration</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#running_a_real_case"><span class="tocnumber">4</span> <span class="toctext">Running a Real Case</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#coupling_with_fuel_moisture_and_smoke"><span class="tocnumber">5</span> <span class="toctext">Coupling with Fuel Moisture and Smoke</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#configuration"><span class="tocnumber">3</span> <span class="toctext">Simulation Configuration</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#WRF-output"><span class="tocnumber">4</span> <span class="toctext">Output and Data Processing
+</span></a></li>
+<!-- <li class="toclevel-1 tocsection-5"><a href="#coupling_with_fuel_moisture_and_smoke"><span class="tocnumber">5</span> <span class="toctext">Coupling with Fuel Moisture and Smoke</span></a></li>
 <li class="toclevel-1 tocsection-6"><a href="#data_assimilation_and_ignition_from_a_perimeter"><span class="tocnumber">6</span> <span class="toctext">Data assimilation and ignition from a perimeter</span></a></li>
 <li class="toclevel-1 tocsection-7"><a href="#standalone_fire_model"><span class="tocnumber">7</span> <span class="toctext">Standalone Fire Model</span></a></li>
 <li class="toclevel-1 tocsection-8"><a href="#visualisation"><span class="tocnumber">8</span> <span class="toctext">Visualisation</span></a></li>
 <li class="toclevel-1 tocsection-9"><a href="#diagnostics"><span class="tocnumber">9</span> <span class="toctext">Diagnostics</span></a></li>
-<li class="toclevel-1 tocsection-10"><a href="#publications"><span class="tocnumber">10</span> <span class="toctext">Publications</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#publications"><span class="tocnumber">10</span> <span class="toctext">Publications</span></a></li> -->
 </ul>
 </div>
 
@@ -149,7 +153,7 @@ different atmospheric conditions with varying stratification and mean wind forci
 <!-- --------------------------- -->
 <!-- CONFIGURATION -->
 <hr>
-<h3><span class="mw-headline" id="configuration">Configuration</span></h3>
+<h3><span class="mw-headline" id="configuration">WRF-bPlume Simulation Configuration</span></h3>
 
 <!-- new_in_WRF_bPlume -->
 <h4 onclick="myFunction('new_in_WRF_bPlume_toggle')"> <li><span class="mw-headline" id="new_in_WRF_bPlume"> <a> New variables added in WRF-bPlume </a> </span> </li></h4> 
@@ -396,17 +400,143 @@ This example has no mean wind </li></ul>
 <!-- --------------------------- -->
 <!-- OUTPUT DATA -->
 <hr>
-<h3><span class="mw-headline" id="WRF-output">WRF Output Data</span></h3>
+<h3><span class="mw-headline" id="WRF-output">WRF-bPlume Output and Data Processing</span></h3>
 
 <!-- NetCDF -->
-<h4 onclick="myFunction('netcdf_toggle')"><li> <span class="mw-headline" id="NetCDF"><a>NetCDF Data</a></span></li></h4>
+<h4 onclick="myFunction('netcdf_toggle')"><li> <span class="mw-headline" id="NetCDF"><a>Output Data: NetCDF</a></span></li></h4>
 <div id="netcdf_toggle" hidden>
-	<ul>Output for WRF-bPlume is in NetCDF format. NetCDF (network Common Data Form) is a file format for storing multidimensional scientific data (variables) such as temperature, humidity, pressure, wind speed, and direction. Each of these variables can be displayed through a dimension (such as time) in ArcGIS by making a layer or table view from the netCDF file.</ul>
+	<ul>WRF writes its output in NetCDF format. NetCDF (network Common Data Form) is a file format for storing multidimensional scientific data (variables) such as temperature, humidity, pressure, wind speed, and direction. Each of these variables can be displayed through a dimension (such as time) in ArcGIS by making a layer or table view from the netCDF file.</ul>
+
+	<ul>A python library PyPlume is used to extract single data variable from NetCDF files and converted them into .npy files for further analysis. To extract data, PyPlume used xarray and dask.array python libraries (<a href="https://docs.xarray.dev/en/stable/">xarray document</a>) </ul>
+</div>
+
+<!-- NetCDF -->
+<h4 onclick="myFunction('pyplume_toggle')"><li> <span class="mw-headline" id="Pyplume"><a>PyPlume Python Library</a></span></li></h4>
+<div id="pyplume_toggle" hidden>
+	<ul>PyPlume Python Library was developed using data generated from WRF-bPlume numerical tool.
+The library for Pyplume is given in the flowchart.Data generated by WRF-bPlume model is in the netCDF
+format. Pyplume library gives the ability to extract a specific variable out of the netCDF data files.
+Classes from the library have been developed to compute and visualize the time-averaged mean flow field
+and the turbulence characteristics of the plume. The library also implemented a vortex identification
+method allowing detecting and visualizing vertices. Pyplume library streamlines processing steps of the
+turbulent buoyant plume data and make it easier for researchers to extract plume characteristics out of
+the data without the computation background knowledge. The data analysis is performed for plume’s
+physical metrics and turbulent characteristic.</ul>
+<center>
+<picture>
+  <source srcset="images/Pyplume FlowChart.png">
+  <img src="images/Pyplume FlowChart.png" alt="Flowchart" style="width:80%;">
+  <figcaption>Figure 1: Pyplume Flowchart.</figcaption>
+</picture>
+</center>
+
+	<ul><li>Installation: The PyPlume library is installed by using pip install using the command line “
+pip install pyplumewrfles ”. It should be noted to upgrade pip install using the command line
+“ python -m pip install –upgrade pip ”. Detail documents of PyPlume is available at GitHub:
+https://github.com/pyplumecamee/pyplume</li></ul>
+<ul><li>Extracting Data: The netCDF output data from WRF-bPlume contains instantaneous velocities
+in Cartesian coordinates (W,V,U), potential temperature different represented as T, and plume
+gas mixing ratio, QPLUME. These five variables are the main focus in the analysis process. T
+and QPLUME can be use to calculate plume temperature Θ , density ρ , or reduced gravity
+g′. Pyplume had included function pyplume.WRF2npy() to extracts all the variables from the
+netCDF files and saves it to NumPy array files. The shape of the data is four dimensions arrays
+(time,z,y,x).</li></ul>
+<ul><li>Metadata (class): The Metadata class is used to store all the required inputs variable for data
+that will be used to analyze the output data. This class is not a requirement and the variables
+can be store individually. List of input variables are available in the namelist file which is the
+input for the WRF-bPlume simulation. Metadata includes the size of the variables corresponds
+to the shape of the data and the mesh spacing (dz,dy,dx) and time step of the data output,
+dt. The class also includes the constant heat flux of the source, the gas constant for the plume
+simulation, the source diameter D, located at the center of the domain bottom boundary, the
+ambient temperature, dynamic viscosity and density of the ambient gas and the released gas.</li></ul>
+<ul><li>Buoyancy and Reduced gravity parameters (g′ρs and g′Θs ): reduced gravity is a robust metric to
+determine the interface of the plume. Using a threshold, the data would be separated into plume-
+area and non-plume-area. The reduced gravity can be based on relative density difference between
+the released gas and the ambient gas, or based on the relative temperature difference between the
+two (1a and 1b). The reduced gravity based on temperature difference and density difference is
+calculated using the functions: pyplume.gprimeT() and pyplume.gprimeRho(), respectively.</li></ul>
+<ul><li>Plume Metrics (class): Plume metrics class is a built-in function to calculate the instantaneous
+plume metrics. Plume metrics class requires the temperature reduced gravity g′Θs and velocity
+in the axial direction W as inputs. The plume interface and plume height are based on the
+temperature reduced gravity by using a threshold criterion. The T and W data are also used
+to calculate the non-dimensionless number for plume data such as the plume Reynolds number,
+maximum mean velocity at the centerline (wcmax), plume half-width at the axial location
+of maximum velocity, the Froude number and Turbulence Reynolds number. This class
+also includes visualization tool to visualize the plume interface in real-time.</li></ul>
+<ul><li>Plume Turbulence Metrics (class): This class calculates the turbulent time average data of the
+plume. The data input is a 3-D array. The input data includes the temperature difference between
+the ambience and the plume, volume fraction, and velocity components (u,v,w). The class will
+generate all the turbulent characteristics of the data such as Reynolds stress, turbulent kinetic
+energy (TKE), rate of TKE production from buoyancy, rate of TKE production from shear. The
+class also includes a visualization function to plot the 2-D and 1-D turbulence fields. The axial-
+and radial profiles of r.m.s. of velocity fluctuations (urms, vrms, wrms), buoyancy fluctuations
+(g′ρrms, g′Θrms) , and momentum flux and buoyancy flux are evaluated. The turbulence kinetic
+energy and the terms are the T.K.E. transport equations are evaluated next. The TKE
+transport equation includes, the shear- and buoyancy TKE production terms, the mean advection
+and transport of TKE terms. The transport equation of the temperature variance equations is also calculated. This equation included the TKE production due to temperature variance.</li></ul>
+<ul><li>Vortex identification Method (function): The PyPlume library included λ2 vortex identification
+method. Vortex Identification method is used to extract the Coherent structures and the large-
+scale features of the flow. The input is the velocity field (u,v,w). λ2 vortex criteria is a vortex
+visualization technique based on using minimum pressure criterion to define a vortex, but it ignores
+the unsteady strain rate and viscosity to define a vortex. Using vortex criteria, three-dimensional
+Iso-surface visuals are generated.</li></ul>
+</div>
+
+
+<!-- Results -->
+<h4 onclick="myFunction('pyplume_results_toggle')"><li> <span class="mw-headline" id="Pyplume_results"><a>PyPlume Results</a></span></li></h4>
+<div id="pyplume_results_toggle" hidden>
+
+<ul>WRF-bPlume Example: a case study for release of CO2 plume into the neutral atmosphere is demonstrated. Neutral atmosphere
+means the ambient of the simulation had no air movements. Plume simulated data was generated
+using WRF-bPlume. The physical domain of simulation is 7km (height) x 1.8km x 1.8km (horizontal
+direction). A circular source is placed at the bottom center of the bottom surface. The diameter of
+the circular source (D) of the released gas 400 meters.</ul>
+
+<center>
+<picture>
+  <img src="images/Front_Height.png" alt="Front_height" style="width:60%;">
+  <figcaption>Figure 2: Plume Height.</figcaption>
+</picture>
+</center>
+
+<center>
+<picture>
+  <img src="images/Front_Velocity.png" alt="Front_velocity" style="width:55%;">
+  <figcaption>Figure 3: Plume Velocity.</figcaption>
+<center>
+<picture>
+
+<center>
+<picture>
+  <img src="images/overviewplot108.png" alt="overview1" style="width:40%;">
+  <img src="images/overviewplot216.png" alt="overview2" style="width:40%;">
+  <img src="images/overviewplot432.png" alt="overview3" style="width:40%;">
+  <figcaption>Figure 4: Plume Temperature Contour (Times =1080s,2160s,4320s).</figcaption>
+</picture>
+</center>
+
+<center>
+<picture>
+  <img src="images/TKE_centerline.png" alt="TKE_centerline" style="width:55%;">
+  <figcaption>Figure 5: Plume TKE Centerline.</figcaption>
+<center>
+<picture>
+
+<center>
+<picture>
+  <img src="images/l2_gT_2.png" alt="lambda2" style="width:55%;border: 1px solid #000;">
+  <figcaption>Figure 6: Lambda2 Contour.</figcaption>
+  
+</picture>
+</center>
+
+	
 </div>
 <hr>
 
 
-
+<!-----------------------------------------THE END -->
 <table cellspacing="3" align="center">
 <tbody><tr valign="top">
 <td width="80%" class="centerblock">
