@@ -133,11 +133,18 @@ different atmospheric conditions with varying stratification and mean wind forci
 <div id="installation_toggle" hidden>
 <ul><li>Step1: The latest version of WRF-bPlume is avaliable at <a href="https://github.com/CFD-UTSA/bplume-WRF">https://github.com/CFD-UTSA/bplume-WRF</a>.</li></ul>
 <ul><li>Step2: Follow usual WRF-ARW compiling steps (<a href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php">WRF-ARW</a>).</li></ul>
-<ul><li>Step3: **Compile WRF in Large-eddy simulation mode.</li></ul>
-<ul><li>Step4: **A successful compilation for idealized cases will result in ideal.exe and wrf.exe executables in the main/ directory.</li></ul>
-<ul><li>Step5: Start building cases using the test case available within WRF build.</li></ul>
-<ul><li>Step6: **For a quick CBL case, use /test/em_les/ present in the main WRF directory.</li></ul>
-<ul><li>Step7: Key files modified for WRF-bPlume are present in Registry/ and dyn_em/ directories.</li></ul>
+<ul><li>Step3: Users need to choose whether to run WRF in ideal case or real case.</li></ul>
+<ul><li>For Ideal Case:</li></ul>
+<ul><ul><li>Step4: For idealized cases (i.e., no terrain/geographic input) - Compile WRF in Large-eddy simulation mode (em_les).</li></ul></ul>
+<ul><ul><li>Step5: A successful compilation for 3D idealized cases will result in ideal.exe and wrf.exe executables in the main/ directory.</li></ul></ul>
+<ul><ul><li>Step6: Start building cases using the test case available within WRF build.</li></ul></ul>
+<ul><ul><li>Step7: For a quick ideal convective or neutral boundary layer case in large eddy simulation framework, use /test/em_les/ present in the main WRF directory.</li></ul></ul>
+<ul><li>For Real Case:</li></ul>
+<ul><ul><li>Step4:  For real cases (i.e., with terrain and realistic background flow inputs) – Compile WRF in 3D Real cases (em_real).</li></ul></ul>
+<ul><ul><li>Step 5: A successful compilation for 3D real cases will result in real.exe, ncdown.exe and wrf.exe executables in the main/ directory.</li></ul></ul>
+<ul><ul><li>Step 6: If building WRF for real cases, WPS program must be built, and the model initialization requires meteorological inputs for initial and lateral boundary conditions.</li></ul></ul>
+<ul><ul><li>Step 7: Since the meteorological inputs are available at coarser resolution, nested domains are required to downscale the boundary conditions required for region of interest.</li></ul></ul>
+<ul><ul><li>SStep 8: For proper turbulence build-up within the model, nested Large-eddy simulations are to be performed. (See sample namelist.input for recommended settings).</li></ul></ul>
 </div>
 
 <!-- WRF_ARW links -->
@@ -221,6 +228,7 @@ The start time must match the time information in restart file (wrfrst_d01_*.nc)
 <div id="myoutfields_toggle" hidden>
 <ul><li>Useful in reducing the WRFOUT file size</li></ul> 
 <ul><li>Many of the default variables written by WRF are unimportant for ideal cases</li></ul>
+<ul><li>Must be placed in each folder where the case is running</li></ul>
 <ul><p style="font-size: xx-small;">-:h:0:LU_INDEX,DZS,VAR_SSO,NEST_POS,FNM,FNP,RDNW,RDN,DNW,DN,CFN,CFN1,RDX,RDY,RESM<br>-:h:0:ZETATOP,CF1,CF2,CF3,ITIMESTEP,XTIME,SHDMAX,SHDMIN,SNOALB,TSLB<br>
 -:h:0:SMOIS,SH2O,SEAICE,XICEM,SFROFF<br>
 -:h:0:UDROFF,IVGTYP,ISLTYP,VEGFRA,ACSNOM,SNOW,SNOWH,CANWAT,COSZEN,LAI,VAR<br>
@@ -242,7 +250,7 @@ The start time must match the time information in restart file (wrfrst_d01_*.nc)
 </div>
 
 <!-- Simulation Domains -->
-<h4 onclick="myFunction('simulation_domain_toggle')"><li> <span class="mw-headline" id="simulation_domain"><a>Simulation Time</a></span></li></h4>
+<h4 onclick="myFunction('simulation_domain_toggle')"><li> <span class="mw-headline" id="simulation_domain"><a>Simulation Domains</a></span></li></h4>
 <div id="simulation_domain_toggle" hidden>
 <ul>&domains</ul> 
 <ul><ul>time_step &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
@@ -343,7 +351,7 @@ Buoyant gas in bPlume model is part of such schemes.
 
 <ul><li>First line gives the temperature and moisture mixing ratio at the surface level (1000 corresponds to pressure)</li></ul> 
 <ul><li>Required inputs are temperature, moisture, U and V wind components
-This example has no mean wind </li></ul> 
+This example has no mean wind. This example has a 10 m/s mean wind along x-direction and an initial boundary layer depth of 2000 m. </li></ul> 
 
 <ul>1000.00   305.00      14.00</ul>
 <ul>25.00     300.00      10.00       10.00       0.00</ul>
